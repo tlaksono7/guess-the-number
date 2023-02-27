@@ -1,6 +1,5 @@
 const highestScoreEl = document.querySelector("#highestscore")
 const numberEl = document.querySelector(".content-body__number")
-const randomNumber = Math.trunc(Math.random() * 20 + 1)
 const guesserNumberInput = document.querySelector(".content-body__guesser--input")
 const messageEl = document.querySelector(".content-body__guesser--message")
 const scoreEl = document.querySelector("#score")
@@ -8,6 +7,7 @@ const scoreEl = document.querySelector("#score")
 const guessButton = document.querySelector(".btn--guess")
 const playButton = document.querySelector(".btn--play")
 
+let randomNumber = Math.trunc(Math.random() * 20 + 1)
 let score = 20
 let highestScore = 0
 let hasWinner
@@ -25,6 +25,7 @@ guessButton.addEventListener('click', function() {
         if (score > highestScore) {
             highestScore = score
             highestScoreEl.textContent = highestScore
+            hasWinner = true
         }
     } else if (guesserNumberValue < randomNumber) {
         displayMessage("📉 Too low!")
@@ -36,6 +37,21 @@ guessButton.addEventListener('click', function() {
         scoreEl.textContent = score
     } else if (!guesserNumberValue) {
         displayMessage("⛔ Not a number!")
+    }
+})
+
+playButton.addEventListener('click', function() {
+    if (hasWinner) {
+        score = 20
+        scoreEl.textContent = score
+
+        highestScore = 0
+        highestScoreEl.textContent = highestScore
+
+        guesserNumberInput.value = ""
+        numberEl.textContent = "?"
+
+        randomNumber = Math.trunc(Math.random() * 20 + 1)
     }
 })
 

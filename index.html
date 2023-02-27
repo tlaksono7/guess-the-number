@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
     
-    <title>Advice generator app</title>
+    <title>Guess The Number</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="assets/css/colors.css">
@@ -21,16 +21,20 @@
             <div class="main-content">
                 <div class="content-header">
                     <h1 class="content-header__title">Guess The Number</h1>
-                    <p class="content-header__highscore">Highest Score:<span id="highestscore">0</span></p>
                 </div>
                 <div class="content-body">
+                    <div class="content-body__score">
+                        <p class="content-score__current">Your score: <span id="score">20</span></p>
+                        <p class="content-score__high">Highest Score: <span id="highestscore">0</span></p>
+                    </div>
                     <h1 class="content-body__number">?</h1>
                     <div class="content-body__guesser">
                         <p class="content-body__guesser--message">Let's start the game!</p>
                         <input class="content-body__guesser--input" maxlength="2">
-                        <p class="content-body__guesser--score">Your score: <span id="score">20</span></p>
-                        <button class="btn btn--guess">Guess!</button>
-                        <button class="btn btn--play">Play Again!</button>
+                        <div class="content-body__guesser--action">
+                            <button class="btn btn--guess">Guess!</button>
+                            <button class="btn btn--play">Play Again!</button>
+                        </div>
                     </div>
                 </div>
             </div>

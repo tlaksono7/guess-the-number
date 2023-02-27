@@ -23,7 +23,7 @@ img {
 
 
 body {
-    background-color: var(--white);
+    background-color: var(--pink);
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     color: var(--black);
@@ -38,34 +38,31 @@ body {
 }
 
 .container {
-    width: 650px;
+    width: 550px;
     padding: 20px;
 }
 
 .main-content {
     padding: 30px;
     border-radius: 30px;
-    background-color: var(--darker-white);
+    background-color: var(--lighter-pink);
 }
 
 .content-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--light-gray);
+    padding: 10px;
+    text-align: center;
 }
 
 .content-header__title {
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
+    color: var(--dark-pink)
 }
 
-.content-header__highscore {
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
+.content-body {
+    padding: 20px;
+    text-align: center;
 }
 
 #highscore {
@@ -73,9 +70,10 @@ body {
     margin-left: 10px;
 }
 
-.content-body {
-    padding: 20px;
-    text-align: center;
+.content-body__score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content-body__number {
@@ -87,15 +85,16 @@ body {
     margin-top: 20px;
 }
 
-
 .content-body__guesser--input {
     padding: 10px 20px;
     margin-bottom: 30px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--dark-pink);
     font-size: 2rem;
     font-weight: 800;
     width: 100px;
     text-align: center;
+    border-radius: 10px;
+    color: var(--dark-pink)
 }
 
 .content-body__guesser--message {
@@ -118,13 +117,23 @@ body {
 
 .btn--guess {
     margin-right: 10px;
-    border: 1px solid var(--pink);
-    background-color: var(--pink);
+    border: 1px solid var(--neon-pink);
+    background-color: var(--neon-pink);
     color: var(--white);
+}
+
+.btn--guess:hover {
+    border: 1px solid var(--dark-pink);
+    background-color: var(--dark-pink);
 }
 
 .btn--play {
     background-color: var(--green);
     border: 1px solid var(--green);
     color: var(--white);
+}
+
+.btn--play:hover {
+    background-color: var(--dark-green);
+    border: 1px solid var(--dark-green);
 }
