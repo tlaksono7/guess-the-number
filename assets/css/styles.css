@@ -1,0 +1,130 @@
+/* CSS Minimize Reset */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* End CSS Minimize Reset */
+
+
+body {
+    background-color: var(--white);
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+}
+
+.container {
+    width: 650px;
+    padding: 20px;
+}
+
+.main-content {
+    padding: 30px;
+    border-radius: 30px;
+    background-color: var(--darker-white);
+}
+
+.content-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.content-header__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.content-header__highscore {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#highscore {
+    color:var(--green);
+    margin-left: 10px;
+}
+
+.content-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-body__number {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.content-body__guesser {
+    margin-top: 20px;
+}
+
+
+.content-body__guesser--input {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--gray);
+    font-size: 2rem;
+    font-weight: 800;
+    width: 100px;
+    text-align: center;
+}
+
+.content-body__guesser--message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.content-body__guesser--score {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn--guess {
+    margin-right: 10px;
+    border: 1px solid var(--pink);
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.btn--play {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white);
+}
