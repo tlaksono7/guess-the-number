@@ -34,11 +34,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 95vh;
+
 }
 
 .container {
-    width: 550px;
+    max-width: 550px;
     padding: 20px;
 }
 
@@ -60,10 +60,15 @@ body {
     color: var(--dark-pink)
 }
 
+.content-header__description {
+    letter-spacing: 2px;
+}
+
 .content-body {
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
+
 
 #highscore {
     color:var(--green);
@@ -74,6 +79,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.content-body__score--current, .content-body__score--high {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-body__score  span {
+    padding: 10px;
+    background-color: green;
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+    width: 70px;
 }
 
 .content-body__number {
@@ -108,6 +130,12 @@ body {
     margin-bottom: 30px;
 }
 
+.content-body__guesser--action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .btn {
     padding: 10px 30px;
     border-radius: 20px;
@@ -116,7 +144,7 @@ body {
 }
 
 .btn--guess {
-    margin-right: 10px;
+    margin-bottom: 10px;
     border: 1px solid var(--neon-pink);
     background-color: var(--neon-pink);
     color: var(--white);
@@ -136,4 +164,38 @@ body {
 .btn--play:hover {
     background-color: var(--dark-green);
     border: 1px solid var(--dark-green);
+}
+
+.attribution {
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1.75em;
+    text-align: center;
+    color: var(--black);
+}
+
+.attribution a {
+    color: var(--dark-pink);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.attribution a:hover, .attribution a:focus {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px){
+    .content {
+        height: 90vh;
+        margin-bottom: 10px;
+    }
+    .container {
+        width: 550px;
+    }
+    .content-body__guesser--action {
+        display: block
+    }
+    .btn--guess {
+        margin-right: 10px;
+    }
 }

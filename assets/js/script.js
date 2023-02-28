@@ -12,11 +12,13 @@ let score = 20
 let highestScore = 0
 let hasWinner
 
+guesserNumberInput.value = ""
+
 const displayMessage = function(message) {
     messageEl.textContent = message
 }
 
-guessButton.addEventListener('click', function() {
+guessButton.addEventListener("click", function() {
     const guesserNumberValue = Number(guesserNumberInput.value)
 
     if (guesserNumberValue === randomNumber ) {
@@ -27,6 +29,8 @@ guessButton.addEventListener('click', function() {
             highestScoreEl.textContent = highestScore
             hasWinner = true
         }
+    } else if (!guesserNumberValue) {
+        displayMessage("⛔ Not a number!")
     } else if (guesserNumberValue < randomNumber) {
         displayMessage("📉 Too low!")
         score--
@@ -35,21 +39,17 @@ guessButton.addEventListener('click', function() {
         displayMessage("📈 Too high!")
         score--
         scoreEl.textContent = score
-    } else if (!guesserNumberValue) {
-        displayMessage("⛔ Not a number!")
-    }
+    } 
 })
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener("click", function() {
     if (hasWinner) {
         score = 20
         scoreEl.textContent = score
 
-        highestScore = 0
-        highestScoreEl.textContent = highestScore
-
         guesserNumberInput.value = ""
         numberEl.textContent = "?"
+        messageEl.textContent = "Let's start the game!"
 
         randomNumber = Math.trunc(Math.random() * 20 + 1)
     }
